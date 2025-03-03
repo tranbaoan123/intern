@@ -1,0 +1,32 @@
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+@layer base {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  :root {
+    --clr-button-main: #00a8a4;
+    --clr-button-dark: #0d0f35;
+    --clr-text-high-contrast: #fff;
+    --clr-text-main: #0d0f35;
+    --border-radius-full: 1000px;
+    --column-gap: 40px;
+    --line-height-medium: 24px;
+    --line-height-large: 45px;
+    --wrapper-container: 1330px;
+  }
+  .wrapper {
+    max-width: var(--wrapper-container);
+  }
+}
+@layer utilities {
+  .flex__flow {
+    display: flex;
+  }
+}
