@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="flex__flow">
-      <nav class="wrapper">
+    <header>
+      <nav class="wrapper flex__flow">
         <div class="logo-container">
           <img src="./assets/logo/logo.svg" alt="Website Logo" />
         </div>
-        <ul class="navigation__list">
-          <li class="navigation__list--item">Home</li>
-          <li class="navigation__list--item">Courses</li>
-          <li class="navigation__list--item">Registered</li>
+        <ul class="navigation__list flex__flow">
+          <li class="navigation__list--item"><a href="/">Home</a></li>
+          <li class="navigation__list--item">
+            <a href="courses.html">Courses</a>
+          </li>
+          <li class="navigation__list--item">
+            <a href="#" data-variant="dark-bg">Registered</a>
+          </li>
         </ul>
       </nav>
     </header>
+    <main>
+      <section class="courses wrapper">
+        <h3 class="heading-tertiary">All Courses</h3>
+      </section>
+    </main>
     <script src="./js/script.js"></script>
   </body>
 </html>
