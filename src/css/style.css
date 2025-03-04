@@ -5,15 +5,18 @@
     box-sizing: border-box;
   }
 }
+
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     color: var(--clr-text-main);
   }
+
   li {
     list-style: none;
   }
+
   :root {
     --clr-button-main: #00a8a4;
     --clr-button-dark: #0d0f35;
@@ -40,21 +43,26 @@
     --gray-background: #f4f4f6;
     --padding-large: 64px;
   }
+
   .wrapper {
     max-width: var(--wrapper-container);
     margin-inline: auto;
   }
 }
+
 @layer utilities {
   .flex__flow {
     display: flex;
   }
+
   .grid__flow {
     display: grid;
   }
+
   .course__name {
     font-size: var(--font-size-heading-medium);
   }
+
   .course__category {
     font-size: var(--font-size-paragraph-small);
     font-weight: var(--font-weight-thin);
@@ -62,18 +70,22 @@
     text-transform: uppercase;
     margin-bottom: var(--margin-spacing-small);
   }
+
   .heading__tertiary {
     font-size: var(--font-size-heading-tertiary);
   }
+
   .courses__wrapper {
     grid-template-columns: repeat(3, minmax(320px, 100%));
     column-gap: var(--column-gap);
     row-gap: var(--row-gap);
     margin-top: var(--margin-spacing-medium, 24px);
-    @media (width <= 980px) {
+
+    @media (width <=980px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (width <= 550px) {
+
+    @media (width <=550px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -82,6 +94,7 @@
     width: 100%;
     position: relative;
   }
+
   .course__card .course__label {
     position: absolute;
     background-color: var(--clr-button-main);
@@ -90,57 +103,70 @@
     top: 24px;
     right: 24px;
   }
+
   .course__card--image__container img {
     width: 100%;
   }
+
   .course__description {
     padding: 40px;
     background-color: var(--gray-background);
   }
+
   .course__description .course__info {
     justify-content: space-between;
     align-items: center;
-    @media (width <= 980px) {
+
+    @media (width <=980px) {
       flex-direction: column;
       align-items: start;
       gap: var(--column-gap);
     }
   }
+
   .course__description .course__instructor {
     align-items: center;
     gap: 12px;
     margin-top: var(--margin-spacing-medium);
   }
+
   .course__instructor .course__instructor--name {
     color: var(--clr-text-light);
     font-weight: var(--font-weight-thin);
   }
+
   .course__info .course__price {
     --font-size-heading-medium: 20px;
     font-size: var(--font-size-heading-medium, 20px);
     font-weight: var(--font-weight-bold);
   }
 }
+
 @layer header {
   header {
     margin-top: var(--margin-spacing-large);
     margin-bottom: var(--margin-spacing-small);
   }
-  header > nav {
+
+  header>nav {
     justify-content: space-between;
-    @media (width <= 650px) {
+
+    @media (width <=650px) {
       flex-direction: column;
       align-items: center;
       gap: var(--column-gap);
     }
   }
+
   .navigation__list {
     gap: var(--column-gap);
   }
+
   .navigation__list--item a {
     font-weight: var(--font-weight-bold);
     text-decoration: none;
     color: var(--clr-text-main);
+
     &[data-variant="dark-bg"] {
       background-color: var(--clr-button-dark);
       color: var(--clr-text-high-contrast);
@@ -149,14 +175,17 @@
     }
   }
 }
+
 @layer courses {
   .courses__tag {
     --spacing-medium: 40px;
     margin-top: var(--spacing-medium, 40px);
-    @media (width <= 830px) {
+
+    @media (width <=830px) {
       flex-wrap: wrap;
     }
   }
+
   .courses__tag .courses__tag--btn {
     border: none;
     background-color: transparent;
@@ -164,6 +193,7 @@
     --padding-button-medium: 24px;
     font-weight: var(--font-weight-bold);
     padding: var(--padding-button-small) var(--padding-button-medium);
+
     &[data-variant="dark-bg"] {
       background-color: var(--clr-button-dark);
       color: var(--clr-text-high-contrast);
@@ -172,15 +202,18 @@
 
   .courses .pagination__wrapper {
     justify-content: flex-end;
-    @media (width <= 550px) {
+
+    @media (width <=550px) {
       flex-direction: column;
     }
   }
+
   .courses .pagination {
     align-items: center;
     --row-gap: 8px;
     gap: var(--row-gap);
     margin-top: var(--margin-spacing-large);
+
     @media (width <=550px) {
       flex-direction: column-reverse;
       gap: 16px;
@@ -193,23 +226,28 @@
     background-color: var(--gray-background);
     color: var(--clr-text-main);
     padding: 12px 20px;
+
     &[data-active="active"] {
       background-color: var(--clr-button-main);
       color: var(--clr-text-high-contrast);
     }
   }
 }
+
 @layer footer {
   footer {
     padding-block: 64px;
   }
+
   .site__footer {
     justify-content: space-between;
     align-items: center;
   }
+
   .site__footer a {
     text-decoration: none;
     width: max-content;
+
     &[data-variant="dark-bg"] {
       background-color: var(--clr-button-dark);
       color: var(--clr-text-high-contrast);
@@ -217,53 +255,65 @@
       border-radius: var(--border-radius-full);
     }
   }
+
   .site__footer .keep__in__touch {
     --column-gap: 32px;
     flex-direction: column;
     gap: var(--column-gap);
   }
+
   .keep__in__touch .site__footer--heading {
     font-size: 32px;
     line-height: var(--line-height-large);
     max-width: 380px;
   }
+
   .address {
     gap: var(--column-gap);
   }
+
   .address .navigation {
     flex-direction: column;
     gap: 16px;
   }
+
   .navigation p {
     font-size: 18px;
     font-weight: var(--font-weight-bold);
     color: var(--clr-text-main);
   }
+
   .navigation .site__footer__nav {
     flex-direction: column;
     gap: 16px;
   }
+
   .navigation .social__link {
     --row-gap: 24px;
     gap: var(--row-gap);
     margin-top: var(--margin-spacing-medium);
   }
+
   .site__footer {
     flex-direction: column;
   }
+
   .site__footer__nav--item a {
     color: var(--clr-text-light);
   }
+
   .site__footer .site__footer--information {
     width: 100%;
     justify-content: space-between;
     margin-bottom: var(--margin-spacing-medium);
-    @media (width <= 830px) {
+
+    @media (width <=830px) {
       flex-direction: column;
       align-items: center;
       gap: var(--column-gap);
     }
   }
+
   .site__footer .copyright {
     width: fit-content;
     margin-inline: 0;
@@ -272,6 +322,7 @@
     line-height: var(--line-height-medium);
     font-weight: var(--font-weight-thin);
   }
+
   .navigation .address__detail {
     color: var(--clr-text-light);
     font-size: 16px;
@@ -279,43 +330,118 @@
     font-weight: 400;
     max-width: 200px;
   }
+
   .address__detail {
     margin-top: 16px;
   }
 }
+
 /* COURSE DETAIL */
 @layer hero {
   .hero {
     background-color: var(--gray-background);
     padding: 56px;
   }
+
   .hero .hero__course--detail {
     justify-content: space-between;
   }
+
   .right__side .course__category {
     --font-size-paragraph-small: 18px;
     font-size: var(--font-size-paragraph-small);
   }
+
   .right__side .course__name {
     font-size: var(--font-size-heading-large);
   }
 }
+
 @layer introduction {
   .introduction {
     flex-direction: column;
     gap: var(--column-gap);
+    margin-top: 64px;
   }
+
   .introduction .right__side {
     flex: 1;
+
+    &[data-tweak="column"] {
+      display: flex;
+      flex-direction: column;
+      gap: var(--column-gap);
+    }
   }
+
+  .right__side h4 {
+    --font-size-heading-medium: 32px;
+    font-size: var(--font-size-heading-medium);
+    margin-bottom: 16px;
+  }
+
+  .right__side p {
+    font-size: 18px;
+    line-height: var(--line-height-medium);
+    color: var(--clr-text-light);
+    font-weight: var(--font-weight-thin);
+  }
+
+  .right__side .text__accent {
+    color: var(--clr-text-main);
+    font-weight: var(--font-weight-bold);
+  }
+
   .introduction .left__side {
     flex: 1;
+    width: 100%;
+    background-color: #c8c8c8;
+    height: 372px;
   }
+
   .introduction .first__row,
   .introduction .second__row {
     gap: var(--row-gap);
   }
+
   .introduction .second__row {
     flex-direction: row-reverse;
+  }
+}
+
+@layer recommend_course {
+  .recommend__courses {}
+
+  .recommend__courses h3 {
+    font-size: var(--font-size-heading-tertiary);
+    margin-bottom: 40px;
+  }
+
+  .requirements__info {
+    max-width: 660px;
+    margin-inline: auto;
+    padding: 40px;
+  }
+
+  .requirements__info h4 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .requirements__info .requirement__item {
+    align-items: center;
+    gap: 24px;
+  }
+
+  .requirements__list {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .requirement__item .requirement__text {
+    color: var(--clr-text-light);
+    font-weight: var(--font-weight-thin);
+    line-height: var(--line-height-medium);
   }
 }
