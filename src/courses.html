@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
       <nav class="wrapper flex__flow">
         <div class="logo-container">
-          <img src="./assets/logo/logo.svg" alt="Website Logo" />
+          <img src="./assets/logo/logo.svg" alt="Website__Logo" />
         </div>
         <ul class="navigation__list flex__flow">
           <li class="navigation__list--item"><a href="/">Home</a></li>
@@ -25,9 +31,262 @@
     </header>
     <main>
       <section class="courses wrapper">
-        <h3 class="heading-tertiary">All Courses</h3>
+        <h3 class="heading__tertiary">All Courses</h3>
+        <div class="courses__tag flex__flow">
+          <button
+            type="button"
+            class="courses__tag--btn"
+            data-variant="dark-bg"
+          >
+            All
+          </button>
+          <button type="button" class="courses__tag--btn">Frontend</button>
+          <button type="button" class="courses__tag--btn">Design</button>
+          <button type="button" class="courses__tag--btn">Backend</button>
+          <button type="button" class="courses__tag--btn">Mobile</button>
+          <button type="button" class="courses__tag--btn">QC</button>
+          <button type="button" class="courses__tag--btn">Game</button>
+          <button type="button" class="courses__tag--btn">Blockchain</button>
+        </div>
+        <div class="courses__wrapper grid__flow">
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/react.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">Frontend</p>
+              <h5 class="course__name">ReactJS</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/nodejs.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">BACKEND</p>
+              <h5 class="course__name">NodeJS</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/php.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">BACKEND</p>
+              <h5 class="course__name">PHP</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/flutter.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">MOBILE</p>
+              <h5 class="course__name">Flutter</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/qc.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">QC</p>
+              <h5 class="course__name">QC</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/unity.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">GAME</p>
+              <h5 class="course__name">Unity</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/blockchain.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">Blockchain</p>
+              <h5 class="course__name">Blockchain</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/qc.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">QC</p>
+              <h5 class="course__name">QC</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+          <div class="course__card">
+            <small class="course__label">Offline</small>
+            <div class="course__card--image__container">
+              <img src="./assets/images/iot.png" alt="course__image" />
+            </div>
+            <div class="course__description">
+              <p class="course__category">IOT</p>
+              <h5 class="course__name">IOT</h5>
+              <div class="course__info flex__flow">
+                <div class="course__instructor flex__flow">
+                  <img
+                    src="./assets/images/avatar.png"
+                    alt="course__intrustor__image"
+                  />
+                  <p class="course__instructor--name">Jane Cooper</p>
+                </div>
+                <h6 class="course__price">4.500.000đ</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination__wrapper flex__flow">
+          <div class="pagination flex__flow">
+            <p class="total_items">Total 50 items</p>
+            <div class="pagination__items">
+              <a href="#" data-active="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">...</a>
+              <a href="#">6</a>
+              <a href="#">
+                <img src="./assets/icons/right-arrow.svg" alt="Right Arrow" />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="site__footer wrapper flex__flow">
+      <div class="site__footer--information flex__flow">
+        <div class="keep__in__touch flex__flow">
+          <div class="logo-container">
+            <img src="./assets/logo/logo.svg" alt="Website__Logo" />
+          </div>
+          <h4 class="site__footer--heading">
+            Wanna learn with us? Get in touch
+          </h4>
+          <a href="#" data-variant="dark-bg">Registered</a>
+        </div>
+        <div class="address flex__flow">
+          <div class="navigation flex__flow">
+            <p>Navigation</p>
+            <ul class="flex__flow site__footer__nav">
+              <li class="site__footer__nav--item"><a href="#">Home</a></li>
+              <li class="site__footer__nav--item">
+                <a href="./courses.html">Course</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navigation">
+            <p>Head Office</p>
+            <p class="address__detail">
+              168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh
+              City, Vietnam
+            </p>
+            <div class="social__link flex__flow">
+              <img src="./assets/icons/twiiter.svg" alt="twitter" />
+              <img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
+              <img src="./assets/icons/facebook.svg" alt="facebook" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright wrapper">
+        <small> Copyright © 2023. All rights reserved. </small>
+      </div>
+    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
