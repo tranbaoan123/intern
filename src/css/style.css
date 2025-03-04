@@ -162,6 +162,7 @@
     background-color: transparent;
     --padding-button-small: 10px;
     --padding-button-medium: 24px;
+    font-weight: var(--font-weight-bold);
     padding: var(--padding-button-small) var(--padding-button-medium);
     &[data-variant="dark-bg"] {
       background-color: var(--clr-button-dark);
