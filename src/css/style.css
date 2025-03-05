@@ -51,6 +51,11 @@
 }
 
 @layer utilities {
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
   .flex__flow {
     display: flex;
   }
@@ -103,6 +108,18 @@
     top: 24px;
     right: 24px;
   }
+  .occupation {
+    position: absolute;
+    background-color: var(--clr-button-main);
+    color: var(--clr-text-high-contrast);
+    padding: var(--padding-button-small) var(--padding-button-medium);
+    top: 24px;
+    right: 24px;
+    &[data-variant="light"] {
+      background-color: #dddde3;
+      color: #09090b;
+    }
+  }
 
   .course__card--image__container img {
     width: 100%;
@@ -139,6 +156,30 @@
     --font-size-heading-medium: 20px;
     font-size: var(--font-size-heading-medium, 20px);
     font-weight: var(--font-weight-bold);
+  }
+  .course__time h5 {
+    font-size: var(--font-size-heading-medium);
+  }
+  .course__time {
+    &[data-grid="true"] {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      div {
+        border: 0.5px solid rgb(237, 211, 211);
+        padding: var(--padding-button-medium);
+      }
+      div:nth-child(3) {
+        grid-row: 1/3;
+        grid-column: 3/5;
+      }
+      div:nth-child(4) {
+        grid-row: 2/3;
+        grid-column: 1/3;
+      }
+      h5 {
+        font-size: var(--font-size-heading-medium);
+      }
+    }
   }
 }
 
@@ -396,10 +437,6 @@
     gap: var(--row-gap);
     margin-bottom: 35px;
   }
-
-  .course__time h5 {
-    font-size: var(--font-size-heading-medium);
-  }
 }
 
 @layer introduction {
@@ -496,5 +533,49 @@
     color: var(--clr-text-light);
     font-weight: var(--font-weight-thin);
     line-height: var(--line-height-medium);
+  }
+}
+@layer lecturers {
+  .lecturers {
+    h4 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+  .lecturers {
+    overflow: hidden;
+  }
+  .lecturers .slider {
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .lecturers__container .lecturer__card {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .lecturer__info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .lecturer__info .lecturer__position {
+      font-weight: var(--font-weight-thin);
+      line-height: var(--line-height-medium);
+      color: var(--clr-text-light);
+    }
+    .lecturer__info .lecturer__name {
+      font-size: var(--font-size-heading-medium);
+      color: var(--clr-text-main);
+      font-weight: var(--font-weight-bold);
+    }
+    .lecturer__info .lecturer__description {
+      color: var(--clr-text-light);
+      line-height: var(--line-height-medium);
+    }
+    .lecturer__info .link__contact {
+      color: var(--clr-text-light);
+    }
   }
 }
