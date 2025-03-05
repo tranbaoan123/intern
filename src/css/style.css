@@ -148,7 +148,7 @@
     margin-bottom: var(--margin-spacing-small);
   }
 
-  header>nav {
+  header > nav {
     justify-content: space-between;
 
     @media (width <=650px) {
@@ -351,9 +351,54 @@
     --font-size-paragraph-small: 18px;
     font-size: var(--font-size-paragraph-small);
   }
-
+  .right__side .course__time .title {
+    font-size: 16px;
+    color: var(--clr-text-light);
+    font-weight: var(--font-weight-thin);
+    margin-bottom: 16px;
+  }
+  .right__side .course__info {
+    background-color: #fff;
+    padding: 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .right__side a {
+    display: inline-block;
+    margin-top: 35px;
+    &[data-variant="dark-bg"] {
+      font-weight: var(--font-weight-bold);
+      text-decoration: none;
+      background-color: var(--clr-button-dark);
+      color: var(--clr-text-high-contrast);
+      padding: var(--padding-button-small) var(--padding-button-medium);
+      border-radius: var(--border-radius-full);
+    }
+  }
+  .course__info .course__intructor {
+    gap: 12px;
+    align-items: center;
+    p {
+      color: var(--clr-text-light);
+      font-weight: var(--font-weight-thin);
+    }
+  }
+  .course__info .course__price {
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+  }
   .right__side .course__name {
     font-size: var(--font-size-heading-large);
+    margin-bottom: var(--column-gap);
+  }
+  .right__side .course__time {
+    gap: var(--row-gap);
+    margin-bottom: 35px;
+  }
+
+  .course__time h5 {
+    font-size: var(--font-size-heading-medium);
   }
 }
 
@@ -364,7 +409,7 @@
     margin-top: 64px;
   }
 
-  .introduction .right__side {
+  .introduction .right__column {
     flex: 1;
 
     &[data-tweak="column"] {
@@ -374,20 +419,20 @@
     }
   }
 
-  .right__side h4 {
+  .right__column h4 {
     --font-size-heading-medium: 32px;
     font-size: var(--font-size-heading-medium);
     margin-bottom: 16px;
   }
 
-  .right__side p {
+  .right__column p {
     font-size: 18px;
     line-height: var(--line-height-medium);
     color: var(--clr-text-light);
     font-weight: var(--font-weight-thin);
   }
 
-  .right__side .text__accent {
+  .right__column .text__accent {
     color: var(--clr-text-main);
     font-weight: var(--font-weight-bold);
   }
@@ -408,9 +453,17 @@
     flex-direction: row-reverse;
   }
 }
-
+@layer schedule {
+  .schedule {
+    h4 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+}
 @layer recommend_course {
-  .recommend__courses {}
+  .recommend__courses {
+  }
 
   .recommend__courses h3 {
     font-size: var(--font-size-heading-tertiary);
